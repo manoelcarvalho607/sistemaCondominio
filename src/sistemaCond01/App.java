@@ -2,17 +2,23 @@ package sistemaCond01;
 
 /**
  * 
- * @author Manoel Carvalho
+ * @author manoel.carvalho
  *
  */
 
 public class App {
 
 	public static void main(String[] args) {
-		Morador morador = new Morador();
-		Visitante visitante = new Visitante();
-		Fornecedor fornecedor = new Fornecedor();
+		AcessoMorador();
+		System.out.println("---------------------------------");
+		AcessoVisitante();
+		System.out.println("-----------------------------------");
+		AcessoFornecedor();
 		
+	}
+
+	private static void AcessoMorador() {
+		Morador morador = new Morador();
 		System.out.println("Cadastro Moradores");
 		System.out.println("");
 		morador.setCodigo(1);
@@ -21,7 +27,13 @@ public class App {
 		String nomeMorador = morador.getNome();
 		System.out.println(nomeMorador);
 		morador.setCpf("");
-		System.out.println("---------------------------------");
+		
+		
+	}
+	
+	private static void AcessoVisitante() {
+		
+		Visitante visitante = new Visitante();
 		System.out.println("Cadastro de Visitante");
 		System.out.println("");
 		visitante.setCodigo(1);
@@ -30,7 +42,12 @@ public class App {
 		visitante.setNome("João");
 		String nomeVisitante = visitante.getNome();
 		System.out.println("nome do visitante: " + nomeVisitante);
-		System.out.println("-----------------------------------");
+		
+	}
+	
+	private static void AcessoFornecedor() {
+		
+		Fornecedor fornecedor = new Fornecedor();
 		System.out.println("Cadastro de Fornecedores");
 		System.out.println("");
 		fornecedor.setCodigo(5);
@@ -62,8 +79,10 @@ public class App {
 		System.out.println("Observações: " + comentario);
 		
 		
-		
-
 	}
+
+	
+	
+
 
 }
